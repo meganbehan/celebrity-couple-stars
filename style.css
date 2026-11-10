@@ -6,13 +6,13 @@ main { width:min(980px,92vw); margin:auto; padding:clamp(2rem,7vw,5.5rem) 0 2.5r
 h1 { font-family:"Playfair Display",serif; font-size:clamp(3.5rem,10vw,7rem); line-height:.85; margin:.55rem 0 1rem; letter-spacing:-.08em; }
 h1 em { color:var(--pink); font-weight:600; }
 .intro { color:#d8cde9; margin-bottom:2rem; }
-.sky { position:relative; min-height:330px; border:1px solid rgba(255,255,255,.17); border-radius:26px; overflow:hidden; background:linear-gradient(135deg,rgba(255,255,255,.07),transparent 45%),rgba(8,7,29,.54); box-shadow:0 25px 60px rgba(0,0,0,.25); }
+.sky { position:relative; min-height:375px; border:1px solid rgba(255,255,255,.17); border-radius:26px; overflow:hidden; background:linear-gradient(135deg,rgba(255,255,255,.07),transparent 45%),rgba(8,7,29,.54); box-shadow:0 25px 60px rgba(0,0,0,.25); }
 .sky::before { content:""; position:absolute; inset:0; opacity:.52; background-image:radial-gradient(#fff 1px,transparent 1.5px),radial-gradient(#fff 1px,transparent 1.5px); background-position:12px 17px,83px 54px; background-size:101px 113px,137px 149px; }
 .star { position:absolute; z-index:1; border:0; background:transparent; color:var(--gold); font-size:clamp(2.1rem,5vw,3.7rem); cursor:pointer; filter:drop-shadow(0 0 10px rgba(255,216,102,.8)); transition:transform .18s ease,filter .18s ease; }
 .star:hover,.star:focus-visible { transform:scale(1.28) rotate(16deg); filter:drop-shadow(0 0 18px #fff0a6); outline:none; }
 .star span { display:block; font:10px "DM Mono",monospace; color:#fff; white-space:nowrap; opacity:0; transform:translateX(-25%); transition:opacity .18s; }
 .star:hover span,.star:focus-visible span { opacity:1; }
-.reveal { min-height:210px; margin:1.25rem auto 0; padding:1.6rem; display:grid; place-items:center; border-radius:22px; background:#fff8e8; color:#271a47; transition:transform .25s; }
+.reveal { min-height:250px; margin:1.25rem auto 0; padding:1.6rem; display:grid; place-items:center; border-radius:22px; background:#fff8e8; color:#271a47; transition:transform .25s; }
 .reveal.active { animation:pop .35s ease-out; }
 .spark { color:#d65392; font-size:2rem; }
 .hint { color:#645670; }
@@ -21,6 +21,7 @@ h1 em { color:var(--pink); font-weight:600; }
 .status.together { background:#dff5d6; color:#275d2b; }.status.split { background:#f9dbe9; color:#8b235c; }
 .dates { display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; margin-top:1rem; font-size:.82rem; }.dates b{ color:#b02e71; }
 .story { max-width:620px; margin:.9rem auto 0; color:#5e5166; line-height:1.55; font-size:.86rem; }
+.portraits { display:flex; justify-content:center; margin:0 auto .9rem; }.portrait { width:88px; height:88px; border:4px solid #fff8e8; border-radius:50%; object-fit:cover; background:#d9c7da; }.portrait + .portrait { margin-left:-17px; }.portrait.fallback { display:grid; place-items:center; background:linear-gradient(135deg,#f6bad6,#b9d6f5); color:#43234a; font:1.5rem "Playfair Display",serif; }.signs { display:flex; justify-content:center; gap:.5rem; flex-wrap:wrap; margin:.15rem 0 .75rem; }.sign { border:1px solid #dbc9d2; border-radius:999px; padding:.28rem .5rem; font-size:.67rem; color:#60445e; }.guess { display:flex; justify-content:center; gap:.55rem; margin:.8rem 0 .2rem; }.guess button { border:0; border-radius:999px; padding:.65rem .85rem; cursor:pointer; font:700 .68rem "DM Mono",monospace; letter-spacing:.03em; }.guess .yes { background:#dff5d6; color:#275d2b; }.guess .no { background:#f9dbe9; color:#8b235c; }.guess button:hover { transform:translateY(-2px); }.answer { margin:.55rem 0 0; font-size:.75rem; font-weight:bold; color:#8b235c; }
 .note { color:#a79abd; font-size:.68rem; line-height:1.5; margin-top:1.25rem; }
 @keyframes pop { 0%{transform:scale(.96)} 60%{transform:scale(1.015)} 100%{transform:scale(1)} }
-@media(max-width:550px){ .sky{min-height:290px}.star span{display:none}.reveal{padding:1.2rem} }
+@media(max-width:550px){ .sky{min-height:320px}.star span{display:none}.reveal{padding:1.2rem}.portrait{width:70px;height:70px} }
